@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+#Controller
+use App\Http\Controllers\FornecedorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('dashboard');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+#Dashboard -------------------------------------------------------------------------
+Route::prefix('dashboard')->middleware(['auth'])->group( function(){
+    Route::get('/', function(){
+        return view('dashboard');
+    })->name('dashboard');
+});
 
+#FORNECEDOR ROTAS -------------------------------------------------------------------
 require __DIR__.'/auth.php';
