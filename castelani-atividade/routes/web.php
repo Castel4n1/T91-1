@@ -27,4 +27,18 @@ Route::prefix('dashboard')->middleware(['auth'])->group( function(){
 });
 
 #FORNECEDOR ROTAS -------------------------------------------------------------------
+Route::prefix('fornecedor')->middleware(['auth'])->controller(FornecedorController::class)
+->group( function()
+{
+    Route::get('/', 'index')->      name('fornecedor.index');
+    Route::get('/novo', 'create')-> name('forcenedor.create');
+    Route::get('/editar/{id}', 'edit')-> name('forcenedor.edit');
+    Route::get('/mostrar', 'show')-> name('forcenedor.show');
+    Route::get('/cadastrar', 'store')-> name('forcenedor.store');
+    Route::get('/atualizar/{id}', 'update')-> name('forcenedor.update');
+    Route::get('/deletar/{id}', 'destroy')-> name('forcenedor.destroy');
+    
+
+});
+
 require __DIR__.'/auth.php';
