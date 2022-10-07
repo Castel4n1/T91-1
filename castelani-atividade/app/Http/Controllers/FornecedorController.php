@@ -36,7 +36,7 @@ class FornecedorController extends Controller
     public function edit(int $id){
         $fornecedor = Fornecedor::find($id);
         return view('fornecedor.form')
-                ->with(compact('tipo'));
+                ->with(compact('fornecedor'));
     }
 
     public function update(Request $request, int $id){
