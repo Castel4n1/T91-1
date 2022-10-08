@@ -4,9 +4,15 @@
 
     <h1>Fornecedor: </h1>
     <ol>
-        <td>{{ $fornecedor->id_fornecedor                   }}</td>
-        <td>{{ $fornecedor->cpf                             }}</td>
-        <td>{{ $fornecedor->empresa                         }}</td>
+        <h3>ID: {{ $fornecedor->id_fornecedor                   }}</h3>
+        <hr>
+        <h3>CPF: {{ $fornecedor->cpf                             }}</h3>
+        <hr>
+        <h3>FORNECEDOR: {{ $fornecedor->empresa                         }}</h3>
+        <hr>
+        <h3>ENTREGADOR: {{ $fornecedor->entregador                         }}</h3>
+        <hr>
+        <h3>DATA DE ENTREGA: {{ $fornecedor->created_at                         }}</h3>
     </ol>
     
 @endsection
