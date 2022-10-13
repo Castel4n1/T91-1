@@ -40,13 +40,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavFluxo">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="#">
-                           <i class="bi bi-house-door-fill"></i>
-                           Home
-                        </a>
                         <a class="nav-link" href="{{ route ('fornecedor.index') }}">
                             <i class="bi bi-piggy-bank-fill"></i>
-                            Lancamentos
+                            Recebimento
                         </a>
                         <a class="nav-link" href="{{ route('logout') }}">
                             <i class="bi bi-box-arrow-right"></i>
