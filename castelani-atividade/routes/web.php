@@ -31,12 +31,12 @@ Route::prefix('fornecedor')->middleware(['auth'])->controller(FornecedorControll
 ->group( function()
 {
     Route::get('/', 'index')->      name('fornecedor.index');
-    Route::get('/novo', 'create')-> name('forcenedor.create');
-    Route::get('/editar/{id}', 'edit')-> name('forcenedor.edit');
-    Route::get('/mostrar', 'show')-> name('forcenedor.show');
-    Route::get('/cadastrar', 'store')-> name('forcenedor.store');
-    Route::get('/atualizar/{id}', 'update')-> name('forcenedor.update');
-    Route::get('/deletar/{id}', 'destroy')-> name('forcenedor.destroy');
+    Route::get('/novo', 'create')-> name('fornecedor.create');
+    Route::get('/editar/{id}', 'edit')-> name('fornecedor.edit');
+    Route::get('/mostrar/{id}', 'show')-> name('fornecedor.show');
+    Route::post('/cadastrar', 'store')-> name('fornecedor.store');
+    Route::post('/atualizar/{id}', 'update')-> name('fornecedor.update');
+    Route::get('/deletar/{id}', 'destroy')-> name('fornecedor.destroy');
     
 
 });

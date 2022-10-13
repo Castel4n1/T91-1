@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class FornecedorController extends Controller
 {
     public function index(){
-        $fornecedores = Fornecedor::orderBy('entregador');
+        $fornecedores = Fornecedor::orderBy('entregador')->get();
         return view('fornecedor.index')
                 ->with(compact('fornecedores'));
     }
